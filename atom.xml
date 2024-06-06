@@ -6,7 +6,7 @@
   <link href="https://hanlanyi.github.io/atom.xml" rel="self"/>
   
   <link href="https://hanlanyi.github.io/"/>
-  <updated>2024-05-21T00:16:49.011Z</updated>
+  <updated>2024-05-21T00:16:46.097Z</updated>
   <id>https://hanlanyi.github.io/</id>
   
   <author>
@@ -15,48 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>INMO Air Development Guide</title>
-    <link href="https://hanlanyi.github.io/2024/05/17/2405-INMO-Air-Development-Guide/"/>
-    <id>https://hanlanyi.github.io/2024/05/17/2405-INMO-Air-Development-Guide/</id>
-    <published>2024-05-17T00:20:11.000Z</published>
-    <updated>2024-05-21T00:16:49.011Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="1-INMO-Air-ADB-Activation"><a href="#1-INMO-Air-ADB-Activation" class="headerlink" title="1. INMO Air ADB Activation"></a>1. INMO Air ADB Activation</h1><h1 id="2-Unity-SDK"><a href="#2-Unity-SDK" class="headerlink" title="2. Unity SDK"></a>2. Unity SDK</h1><p>If you have any comments please share it in the <a href="https://github.com/hanlanyi/hanlanyi.github.io/issues">issues</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;1-INMO-Air-ADB-Activation&quot;&gt;&lt;a href=&quot;#1-INMO-Air-ADB-Activation&quot; class=&quot;headerlink&quot; title=&quot;1. INMO Air ADB Activation&quot;&gt;&lt;/a&gt;1. INMO Ai</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Comparison of XReal Air and INMO Air and Deeper</title>
-    <link href="https://hanlanyi.github.io/2024/05/15/2405-Comparison-of-XReal-Air-and-INMO-Air-and-Deeper/"/>
-    <id>https://hanlanyi.github.io/2024/05/15/2405-Comparison-of-XReal-Air-and-INMO-Air-and-Deeper/</id>
-    <published>2024-05-15T00:11:37.000Z</published>
-    <updated>2024-05-21T00:15:56.097Z</updated>
-    
-    <content type="html"><![CDATA[<p>After experiencing XReal Air + Beam after 1 year and a non-stop usage of INMO Air. Here are some of my interesting found outs.</p><ol><li>Deeper Industrial Thoughts</li></ol><p>Birdbath vs. Wave Guide</p><p>Connection vs. All in One</p><p>Latest models: XReal Air 2 Ultra vs. Rayneo X2 Lite</p><p>Nebula vs. chip ar 2</p><ol start="2"><li>Development</li></ol><table><thead><tr><th></th><th>Unity</th><th>Android Studio</th><th>JSAR</th><th>Reference</th></tr></thead><tbody><tr><td>XReal</td><td>Yes</td><td>No</td><td>No</td><td><a href="https://xreal.gitbook.io/nrsdk">link</a></td></tr><tr><td>INMO</td><td>Yes</td><td>Yes</td><td>No</td><td><a href="https://gitee.com/inmolens/docs">link</a></td></tr><tr><td>Rokid</td><td>Yes</td><td>Yes</td><td>Yes</td><td><a href="https://ar.rokid.com/doc">link</a></td></tr><tr><td>Rayneo</td><td>Yes</td><td>Yes</td><td>No</td><td><a href="https://open.rayneo.com/#/docs">link</a></td></tr></tbody></table><p>If you have any comments please share it in the <a href="https://github.com/hanlanyi/hanlanyi.github.io/issues">issues</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;After experiencing XReal Air + Beam after 1 year and a non-stop usage of INMO Air. Here are some of my interesting found outs.&lt;/p&gt;
-&lt;ol&gt;
-&lt;</summary>
-      
-    
-    
-    
-    
-  </entry>
   
   <entry>
     <title>Hello World</title>
