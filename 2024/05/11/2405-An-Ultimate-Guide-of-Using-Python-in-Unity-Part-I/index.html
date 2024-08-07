@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>An Ultimate Guide of Using Python in Unity (Part I) | Han, Lanyi&#39;s Personal Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Hi there! I’d love to hear your thoughts. Feel free to leave a comment, even if it’s just a simple ‘Hi’. Python is the most popular programming language in the world. Unity is the most popular game en">
+<meta property="og:type" content="article">
+<meta property="og:title" content="An Ultimate Guide of Using Python in Unity (Part I)">
+<meta property="og:url" content="https://hanlanyi.github.io/2024/05/11/2405-An-Ultimate-Guide-of-Using-Python-in-Unity-Part-I/index.html">
+<meta property="og:site_name" content="Han, Lanyi&#39;s Personal Blog">
+<meta property="og:description" content="Hi there! I’d love to hear your thoughts. Feel free to leave a comment, even if it’s just a simple ‘Hi’. Python is the most popular programming language in the world. Unity is the most popular game en">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-05-11T00:29:05.000Z">
+<meta property="article:modified_time" content="2024-06-08T01:33:48.161Z">
+<meta property="article:author" content="HAN, Lanyi">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Han, Lanyi's Personal Blog" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/pic/00HANN.ico">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css">
+
+  
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Han, Lanyi&#39;s Personal Blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          
+            <a class="nav-icon" target="_blank" rel="noopener" href="https://youtube.com/@hanlanyi"><span class="fa fa-youtube"></span></a>
+          
+            <a class="nav-icon" target="_blank" rel="noopener" href="https://www.patreon.com/hanlanyi"><span class="fa fa-paytreon"></span></a>
+          
+            <a class="nav-icon" target="_blank" rel="noopener" href="https://instagram.com/hanlanyi"><span class="fa fa-instagram"></span></a>
+          
+            <a class="nav-icon" target="_blank" rel="noopener" href="https://github.com/hanlanyi"><span class="fa fa-github"></span></a>
+          
+            <a class="nav-icon" target="_blank" rel="noopener" href="https://x.com/hanlanyix"><span class="fa fa-twitter"></span></a>
+          
+            <a class="nav-icon" target="_blank" rel="noopener" href="https://hanlanyi.itch.io"><span class="fa fa-itch"></span></a>
+          
+            <a class="nav-icon" target="_blank" rel="noopener" href="https://medium.com/@hanlanyi"><span class="fa fa-medium"></span></a>
+          
+            <a class="nav-icon" target="_blank" rel="noopener" href="https://www.tiktok.com/@hanlanyi"><span class="fa fa-tiktok"></span></a>
+          
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://hanlanyi.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-2405-An-Ultimate-Guide-of-Using-Python-in-Unity-Part-I" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/05/11/2405-An-Ultimate-Guide-of-Using-Python-in-Unity-Part-I/" class="article-date">
+  <time class="dt-published" datetime="2024-05-11T00:29:05.000Z" itemprop="datePublished">2024-05-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      An Ultimate Guide of Using Python in Unity (Part I)
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>Hi there! I’d love to hear your thoughts. Feel free to leave a <a target="_blank" rel="noopener" href="https://github.com/hanlanyi/hanlanyi.github.io/issues">comment</a>, even if it’s just a simple ‘Hi’.</p>
+<p>Python is the most popular programming language in the world. Unity is the most popular game engine in the world. To combine these two, a user guide from Unity is all you need. A very noticable point is that the document of version 7 is way more abundant than all the ones of previous versions combined.</p>
+<p><a target="_blank" rel="noopener" href="https://docs.unity3d.com/Packages/com.unity.scripting.python@7.0/manual/index.html">https://docs.unity3d.com/Packages/com.unity.scripting.python@7.0/manual/index.html</a></p>
+<p>But, to work on a much harder and much more complex project, You need my guide.</p>
+<h2 id="1-Python-Scripting-Manager-Version"><a href="#1-Python-Scripting-Manager-Version" class="headerlink" title="1. Python Scripting Manager Version"></a>1. Python Scripting Manager Version</h2><p>The latest version of the Unity Python Scripting manager is 7.0.1; however, by searching “python” in the package manager, the extension I got was 6.0.1, which stopped updating since 2022–08–04. Since 2023–03–21, Unity release 7.0 version and updated to 7.0.1 with more features and less bugs.</p>
+<p>If you had the same issue I had, simply go to “Package Manager” -&gt; “+” -&gt; “Add Package from git URL”, then type “<a href="mailto:&#x63;&#111;&#109;&#x2e;&#x75;&#110;&#105;&#x74;&#121;&#46;&#x73;&#99;&#x72;&#105;&#112;&#116;&#x69;&#x6e;&#103;&#46;&#x70;&#x79;&#x74;&#x68;&#x6f;&#110;&#x40;&#x37;&#x2e;&#48;&#46;&#x31;">&#x63;&#111;&#109;&#x2e;&#x75;&#110;&#105;&#x74;&#121;&#46;&#x73;&#99;&#x72;&#105;&#112;&#116;&#x69;&#x6e;&#103;&#46;&#x70;&#x79;&#x74;&#x68;&#x6f;&#110;&#x40;&#x37;&#x2e;&#48;&#46;&#x31;</a>“. Done.</p>
+<h2 id="2-For-Anaconda-Users"><a href="#2-For-Anaconda-Users" class="headerlink" title="2. For Anaconda Users"></a>2. For Anaconda Users</h2><p>All the python scripts are running in a separated Unity project, which makes a very neat python coding environment without worrying about conda or venv. However, if you are a conda user like I am, please notice whether the terminal in “Project Manager” -&gt; “Python Scripting” triggers conda virtual environment automatically.</p>
+<p>If it does, all the pip installation will be located in the conda location. To prevent it happens, make sure deactivate the virtual env. Then, all the installations will be successfully installed in Unity’s “Library&#x2F;PythonInstall&#x2F;Lib&#x2F;site-packages”.</p>
+<h2 id="3-Run-a-Juypter-Notebook"><a href="#3-Run-a-Juypter-Notebook" class="headerlink" title="3. Run a Juypter Notebook"></a>3. Run a Juypter Notebook</h2><p>Jupyter Notebook is my favorite brainstorming and demo testing platform, due its instant interaction and lego like code structuring layouts. Although python scripts are mostly short and easy to debug, Jupyter Notebook boosts the process even more efficient.</p>
+<p>Install Jupyter Notebook server：</p>
+<p><a target="_blank" rel="noopener" href="https://jupyter.org/install">Project Jupyter | Installing Jupyter</a></p>
+<p>Jupyter Lab is recommended, or every single click opens a new tap sounds reasonable, then jupyter notebook can also be tested, although people will always choose back to Jupyter Lab.</p>
+<p>Once it is installed, a simple “jupyter lab” on Unity python script terminal will open a web page instantly, which is the exact location of the Unity Project. All the folders and files on the left side will look familiar.</p>
+<p>Alternatively, there is another way of using Jupyter. I personally use vscode for everything, from machine learning to Unity, even writing with the vim extension. VSCode has such a abundant extension libraries, which greatly has one for Jupyter.</p>
+<p>Once the extension is installed, click the top right to select a kernal.</p>
+<p>Make sure jupyter lab is still running. The extension asks the server, password, and the port. The password is the token from terminal which runs jupyter backend.</p>
+<p>In my case is</p>
+<p>38368ba9ca2fb4fac974672e1c0e37419d10c4baf0c1c69e</p>
+<p>Which is the number right after “<a target="_blank" rel="noopener" href="http://localhost:8888/lab?token=">http://localhost:8888/lab?token=</a>“</p>
+<p>Create a file with .ipynb format, for example “test.ipynb”. Now you can enjoy my favorite python brainstorming and demo testing platform in Unity.</p>
+<p>More is on the way.</p>
+<p>If you have any comments please share it in the <a target="_blank" rel="noopener" href="https://github.com/hanlanyi/hanlanyi.github.io/issues">issues</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://hanlanyi.github.io/2024/05/11/2405-An-Ultimate-Guide-of-Using-Python-in-Unity-Part-I/" data-id="clw72jp1t0000bwlu4vz08zs7" data-title="An Ultimate Guide of Using Python in Unity (Part I)" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2024/05/13/2405-hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2024/04/28/2404-A-Prototype-Document-of-a-LLM-Running-on-an-AR-Device/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">A Prototype Document of a LLM Running on an AR Device</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/06/">June 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/05/">May 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/04/">April 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/06/08/2406-INMO-Air-Development-Guide/">INMO Air Development Guide</a>
+          </li>
+        
+          <li>
+            <a href="/2024/05/13/2405-hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2024/05/11/2405-An-Ultimate-Guide-of-Using-Python-in-Unity-Part-I/">An Ultimate Guide of Using Python in Unity (Part I)</a>
+          </li>
+        
+          <li>
+            <a href="/2024/04/28/2404-A-Prototype-Document-of-a-LLM-Running-on-an-AR-Device/">A Prototype Document of a LLM Running on an AR Device</a>
+          </li>
+        
+          <li>
+            <a href="/2024/04/18/2404-XReal-Air-Transforming-Reality-in-Three-Unique-Ways/">XReal Air: Transforming Reality in Three Unique Ways</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 HAN, Lanyi<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
