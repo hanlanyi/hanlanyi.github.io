@@ -35,16 +35,6 @@
     <noscript><p>The demo needs JavaScript. The sections below describe the same three agents.</p></noscript>
   </section>
 
-  <section class="aaa-section" aria-labelledby="agents-h">
-    <h2 id="agents-h">Three agents, one request</h2>
-    <p>One message is handled by a small cast. Each agent has its own system prompt, memory and tool registry; they share one model provider and one picture of the scene.</p>
-    <div class="agents">
-      <div class="agent" style="--agent:#3d8bff"><p class="agent-id">A</p><h3>Atto</h3><p class="agent-role">Orchestrator</p><p>Plans the request, then delegates one step at a time. What Atto finally answers is what you see.</p><p class="agent-tools"><code>delegate_to_executor</code> <code>transform_anno</code> <code>anno_go_home</code></p></div>
-      <div class="agent" style="--agent:#33cc33"><p class="agent-id">B</p><h3>Acco</h3><p class="agent-role">Executor</p><p>Flies to the target position and builds there.</p><p class="agent-tools"><code>spawn_cube</code></p></div>
-      <div class="agent" style="--agent:#f05252"><p class="agent-id">C</p><h3>Anno</h3><p class="agent-role">Shape-shifter</p><p>A 3×3×3 body that flies to a work spot and rearranges into a preset shape. While idle or flying it is one merged cube; the 27 pieces exist only during a morph.</p><p class="agent-tools">Driven by Atto's tools</p></div>
-    </div>
-  </section>
-
   <section class="aaa-section" aria-labelledby="turn-h">
     <h2 id="turn-h">How one turn runs</h2>
     <ol class="flow">

@@ -249,13 +249,6 @@ kbd { font: .75em var(--mono); border: 1px solid var(--line); border-radius: 4px
 .aaa-section { margin-top: 4rem; }
 .aaa-section > h2 { font-size: clamp(1.5rem, 1.1rem + 1.5vw, 2.2rem); margin-bottom: .75rem; }
 .aaa-section > p { max-width: 65ch; margin: 0 0 1.5rem; }
-.agents { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; }
-.agent { border-top: 2px solid var(--accent); padding-top: 1rem; }
-.agent p { margin: 0 0 .6rem; }
-.agent .agent-id { font: 700 2.5rem/1 var(--mono); color: var(--accent); }
-.agent h3 { font-size: 1.4rem; }
-.agent .agent-role { font: .75rem var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-top: .2rem; }
-.agent-tools { font-size: .85rem; color: var(--muted); line-height: 2; }
 .flow { max-width: 65ch; padding-left: 1.4rem; margin: 0; }
 .flow li { padding: .5rem 0 .5rem .4rem; }
 .flow li::marker { font-family: var(--mono); color: var(--accent); }
@@ -270,7 +263,6 @@ kbd { font: .75em var(--mono); border: 1px solid var(--line); border-radius: 4px
 @media (max-width: 52rem) {
   .anno { grid-template-columns: 1fr; }
   .anno-stage { min-height: 19rem; }
-  .agents { grid-template-columns: 1fr; }
   .timeline li { grid-template-columns: 1fr; gap: 0; }
 }
 
@@ -303,8 +295,6 @@ kbd { font: .75em var(--mono); border: 1px solid var(--line); border-radius: 4px
 /* agent colours + Rubik's cube faces */
 .demo-tabs [aria-selected="true"] { border-color: var(--agent); box-shadow: inset 0 -3px var(--agent); }
 .demo-tabs b, .demo-tabs [aria-selected="true"] b { color: var(--agent); }
-.agent { border-top-color: var(--agent); }
-.agent .agent-id { color: var(--agent); }
 .bx.is-rubik i {
   background-color: var(--f);
   background-image:
