@@ -1,0 +1,32 @@
+[
+  {
+    "q": "Who is Lanyi?",
+    "thought": "A question about the person behind this site. No tool needed; answer directly.",
+    "a": "Han, Lanyi (韩蓝毅 / 한람의) is an AI engineer. The work has covered NLP, MLOps, data engineering and backend, and these days it is about putting AI inside AR."
+  },
+  {
+    "q": "What is Lanyi's background?",
+    "thought": "Asking about training and experience. Answer directly.",
+    "a": "A Bachelor of Science in Physics, then seven years as an AI engineer. The physics still earns its keep: optics, classical mechanics, thermodynamics and quantum mechanics all help with understanding how AR hardware works."
+  },
+  {
+    "q": "What is Lanyi building now?",
+    "thought": "That would be this project. Answer directly.",
+    "a": "AAA: a mixed-reality assistant for Meta Quest with three agents. I am Atto, I plan. Acco builds. Anno changes shape. We all run on a local LLM, no cloud."
+  },
+  {
+    "q": "Which AR devices has Lanyi worked with?",
+    "thought": "The videos and posts list the hardware. Answer directly.",
+    "a": "XReal Air and XReal Beam Pro, INMO Air and INMO Air 2, and Meta Quest, which is where AAA runs. There are unboxings and developer guides for several of them on this site."
+  },
+  {
+    "q": "Who are the videos for?",
+    "thought": "Asking about the audience of the channel. Answer directly.",
+    "a": "AI and AR developers, and hard-core amateurs. The aim is to show what a developer actually needs to know about a device, not just what is in the box."
+  },
+  {
+    "q": "How do I reach Lanyi?",
+    "thought": "Asking for contact options. Answer directly.",
+    "a": "Leave a comment on GitHub, even a simple hi is welcome. Every other channel, from YouTube to LinkedIn, is in the top right corner of this page."
+  }
+]

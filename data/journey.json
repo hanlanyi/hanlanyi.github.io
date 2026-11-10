@@ -1,0 +1,7 @@
+[
+  { "city": "Yanbian", "local": "延边", "country": "China", "lon": 129.51, "lat": 42.89 },
+  { "city": "New York", "local": "纽约", "country": "United States", "lon": -74.01, "lat": 40.71 },
+  { "city": "Zurich", "local": "苏黎世", "country": "Switzerland", "lon": 8.54, "lat": 47.37 },
+  { "city": "Shenzhen", "local": "深圳", "country": "China", "lon": 114.06, "lat": 22.54 },
+  { "city": "Seattle", "local": "西雅图", "country": "United States", "lon": -122.33, "lat": 47.61 }
+]

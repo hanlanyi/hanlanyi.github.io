@@ -1,0 +1,83 @@
+<article class="aaa">
+  <header class="aaa-head">
+    <p class="eyebrow">Project · Mixed reality · Meta Quest</p>
+    <h1>AAA <span>Atto, Acco, Anno</span></h1>
+    <p class="aaa-lede">A mixed-reality assistant named after the three agents that live in it. You talk to it in plain language; the agents reason about the request and change the room around you: spawning objects, flying to a work spot, or reshaping their own body.</p>
+    <p class="aaa-links"><a class="sub" href="https://github.com/hanlanyi/AiArAssistant" target="_blank" rel="noopener">Source on GitHub</a><a href="/2025/06/11/2506-AI-AR-Assistant/">The 2025 write-up</a></p>
+  </header>
+
+  <section class="demo" data-demo aria-label="Interactive demo of the three agents">
+    <div class="demo-tabs" role="tablist" aria-label="Agents">
+      <button type="button" role="tab" id="tab-atto" data-tab="atto" style="--agent:#3d8bff" aria-selected="true" aria-controls="demo-panel"><b>A</b><span>Atto<small>answers</small></span></button>
+      <button type="button" role="tab" id="tab-acco" data-tab="acco" style="--agent:#33cc33" aria-selected="false" aria-controls="demo-panel" tabindex="-1"><b>B</b><span>Acco<small>builds</small></span></button>
+      <button type="button" role="tab" id="tab-anno" data-tab="anno" style="--agent:#f05252" aria-selected="false" aria-controls="demo-panel" tabindex="-1"><b>C</b><span>Anno<small>changes shape</small></span></button>
+    </div>
+    <div class="anno">
+      <div class="demo-stage">
+        <div class="world" data-world></div>
+        <p class="anno-note">Drag to rotate</p>
+      </div>
+      <div class="anno-panel" id="demo-panel" role="tabpanel" aria-labelledby="tab-atto">
+        <h2 data-demo-title>Ask Atto about Lanyi</h2>
+        <p class="anno-sub" data-demo-sub></p>
+        <div class="demo-prompts" data-demo-prompts></div>
+        <form class="anno-form" data-demo-form hidden>
+          <label for="demo-in">Or type a request</label>
+          <div class="anno-row">
+            <input id="demo-in" type="text" autocomplete="off" spellcheck="false" value="put a cube over there, then turn Anno into stairs">
+            <button type="submit">Send</button>
+          </div>
+        </form>
+        <pre class="anno-trace" data-demo-trace aria-live="polite"></pre>
+        <p class="anno-fine" data-demo-fine></p>
+      </div>
+    </div>
+    <noscript><p>The demo needs JavaScript. The sections below describe the same three agents.</p></noscript>
+  </section>
+
+  <section class="aaa-section" aria-labelledby="agents-h">
+    <h2 id="agents-h">Three agents, one request</h2>
+    <p>One message is handled by a small cast. Each agent has its own system prompt, memory and tool registry; they share one model provider and one picture of the scene.</p>
+    <div class="agents">
+      <div class="agent" style="--agent:#3d8bff"><p class="agent-id">A</p><h3>Atto</h3><p class="agent-role">Orchestrator</p><p>Plans the request, then delegates one step at a time. What Atto finally answers is what you see.</p><p class="agent-tools"><code>delegate_to_executor</code> <code>transform_anno</code> <code>anno_go_home</code></p></div>
+      <div class="agent" style="--agent:#33cc33"><p class="agent-id">B</p><h3>Acco</h3><p class="agent-role">Executor</p><p>Flies to the target position and builds there.</p><p class="agent-tools"><code>spawn_cube</code></p></div>
+      <div class="agent" style="--agent:#f05252"><p class="agent-id">C</p><h3>Anno</h3><p class="agent-role">Shape-shifter</p><p>A 3×3×3 body that flies to a work spot and rearranges into a preset shape. While idle or flying it is one merged cube; the 27 pieces exist only during a morph.</p><p class="agent-tools">Driven by Atto's tools</p></div>
+    </div>
+  </section>
+
+  <section class="aaa-section" aria-labelledby="turn-h">
+    <h2 id="turn-h">How one turn runs</h2>
+    <ol class="flow">
+      <li><strong>You type in the headset panel.</strong> The UI client attaches scene context: room anchors from Meta's MR Utility Kit and the objects already spawned.</li>
+      <li><strong>Atto reasons in a ReAct loop.</strong> Prompt, model call, parse <code>Thought</code> / <code>Action</code> / <code>Observation</code> / <code>FinalAnswer</code>, dispatch the tool, observe, repeat.</li>
+      <li><strong>Delegation runs the sub-agent inline.</strong> Its real result comes back as Atto's next <code>Observation</code>, so “put a cube there, then turn Anno into stairs” is two passes of the same loop. There is no separate scheduler.</li>
+      <li><strong>Tools change the scene.</strong> A cube spawns, an agent flies, Anno morphs.</li>
+    </ol>
+  </section>
+
+  <section class="aaa-section" aria-labelledby="choices-h">
+    <h2 id="choices-h">Design choices</h2>
+    <dl class="choices">
+      <div><dt>Local model, no cloud</dt><dd>Everything runs against an OpenAI-compatible endpoint on the same LAN: LM Studio serving Gemma. The endpoint can be retyped inside the headset.</dd></div>
+      <div><dt>Unity is the runtime</dt><dd>Agents, tools, prompts and memory all live in the Unity 6 client. No Python server is required in the loop.</dd></div>
+      <div><dt>Shapes are data</dt><dd>Each preset is 27 integer voxel cells in a JSON file. Adding a shape needs no recompile.</dd></div>
+      <div><dt>Fix the prompt, not the parser</dt><dd>When a small model's output breaks tool parsing, the prompt changes. The parser stays strict.</dd></div>
+      <div><dt>Test both sides</dt><dd>“Give me a cube” passes only if the answer says so and a cube really exists in the scene.</dd></div>
+      <div><dt>SDK behind an interface</dt><dd>Meta SDK calls sit behind a platform layer with a null implementation, so tests run headless.</dd></div>
+    </dl>
+  </section>
+
+  <section class="aaa-section" aria-labelledby="time-h">
+    <h2 id="time-h">How it got here</h2>
+    <ol class="timeline">
+      <li><time>Aug 2024</time><p>Repository starts: AR experiments and a first local LLM.</p></li>
+      <li><time>May – Jun 2025</time><p>AR on OpenXR and MR Utility Kit. Agent routing moves into an MCP server with a Python host.</p></li>
+      <li><time>Feb 2026</time><p>AAAHost backend (FastAPI and WebSocket) documented.</p></li>
+      <li><time>Mar – Apr 2026</time><p>Quest SDK calls abstracted; first version of the Unity AR client; the runtime is simplified.</p></li>
+      <li><time>May 2026</time><p>Multi-agent coordinator wires Atto to Acco. Agents get a visible body and flight.</p></li>
+      <li><time>Jun 2026</time><p>Fly-home and working height; scripted build-and-run for Quest.</p></li>
+      <li><time>Jul 2026</time><p>Anno, the shape-shifting agent, joins.</p></li>
+    </ol>
+    <p class="aaa-legacy">The Python backend from the 2025 design is kept in the repository for reference; it is no longer on the runtime path.</p>
+  </section>
+</article>
