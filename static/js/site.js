@@ -52,7 +52,27 @@
   const syncHud = () => {
     hudButtons.forEach((b) => b.setAttribute('aria-pressed', String(hudOn())));
     if (prompter) { prompter.hidden = !hudOn(); if (!hudOn()) scroller.stop(); }
+    const frame = $('iframe.giscus-frame');
+    if (frame) frame.contentWindow.postMessage({ giscus: { setConfig: { theme: giscusTheme() } } }, 'https://giscus.app');
   };
+
+  /* ---------- comments (giscus) ---------- */
+  // Glasses mode is always dark; otherwise follow the reader's system setting, like the site does.
+  const giscusTheme = () => (hudOn() ? 'transparent_dark' : 'preferred_color_scheme');
+  const giscusBox = $('[data-giscus]');
+  if (giscusBox) {
+    const s = document.createElement('script');
+    s.src = 'https://giscus.app/client.js';
+    s.async = true;
+    s.crossOrigin = 'anonymous';
+    const d = giscusBox.dataset;
+    Object.entries({
+      repo: d.repo, 'repo-id': d.repoId, category: d.category, 'category-id': d.categoryId,
+      mapping: 'pathname', strict: '1', 'reactions-enabled': '1', 'emit-metadata': '0',
+      'input-position': 'top', theme: giscusTheme(), lang: 'en', loading: 'lazy',
+    }).forEach(([k, v]) => s.setAttribute('data-' + k, v));
+    giscusBox.appendChild(s);
+  }
   const toggleHud = () => {
     if (hudOn()) root.removeAttribute('data-hud'); else root.setAttribute('data-hud', 'on');
     store.set('hud', hudOn() ? '1' : '0');

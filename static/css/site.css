@@ -134,7 +134,10 @@ kbd { font: .75em var(--mono); border: 1px solid var(--line); border-radius: 4px
 .prose table { display: block; overflow-x: auto; border-collapse: collapse; }
 .prose th, .prose td { border: 1px solid var(--line); padding: .4rem .7rem; text-align: left; }
 .post-foot { margin-top: 3.5rem; padding-top: 1.5rem; border-top: 1px solid var(--line); }
-.comment { font-weight: 600; }
+.comments { scroll-margin-top: 5rem; }
+.comments h2 { font-size: 1.3rem; margin-bottom: 1rem; }
+.giscus { min-height: 8rem; }
+.giscus-frame { width: 100%; border: 0; color-scheme: normal; }
 .pager { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem; }
 .pager a { text-decoration: none; font-weight: 600; line-height: 1.3; }
 .pager .next { text-align: right; }

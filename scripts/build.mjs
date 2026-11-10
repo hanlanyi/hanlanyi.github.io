@@ -10,6 +10,12 @@ const SITE = 'https://hanlanyi.github.io';
 const TITLE = 'Han, Lanyi';
 const TAGLINE = 'AI + AR';
 const ISSUES = 'https://github.com/hanlanyi/hanlanyi.github.io/issues';
+const DISCUSSIONS = 'https://github.com/hanlanyi/hanlanyi.github.io/discussions';
+// Comments: giscus, stored in this repo's GitHub Discussions (one thread per post path).
+const GISCUS = {
+  repo: 'hanlanyi/hanlanyi.github.io', repoId: 'MDEwOlJlcG9zaXRvcnk3MzU0NDI5NA==',
+  category: 'Announcements', categoryId: 'DIC_kwDOBGIyZs4DK1bu',
+};
 
 const SOCIAL = [
   ['youtube', 'YouTube', 'https://youtube.com/@hanlanyi'],
@@ -63,7 +69,7 @@ const posts = fs.readdirSync(path.join(ROOT, 'content', 'posts')).filter((f) => 
   const slug = f.replace(/\.md$/, '');
   // url_date pins a permalink that Hexo generated in a different timezone.
   const [y, mo, d] = (meta.url_date || meta.date).slice(0, 10).split('-');
-  const html = marked.parse(body).replace(/<img /g, '<img loading="lazy" ');
+  const html = marked.parse(body).replace(/<img /g, '<img loading="lazy" ').replaceAll(`href="${ISSUES}"`, 'href="#comments"');
   const text = plain(html);
   // First real paragraph, skipping the standing "leave a comment" greeting.
   const paras = [...html.matchAll(/<p>([\s\S]*?)<\/p>/g)].map((x) => plain(x[1])).filter((p) => p.length > 60 && !p.startsWith('Hi there!'));
@@ -117,7 +123,7 @@ function page({ title, description, url, body, cls = '', scripts = '' }) {
 ${body}
 </main>
 <footer class="foot">
-  <p>© ${new Date().getFullYear()} Han, Lanyi · <a href="/atom.xml">RSS</a> · <a href="${ISSUES}">Say hi</a></p>
+  <p>© ${new Date().getFullYear()} Han, Lanyi · <a href="/atom.xml">RSS</a> · <a href="${DISCUSSIONS}">Say hi</a></p>
   ${socialList('social social-foot')}
 </footer>
 <script src="/js/site.js" defer></script>
@@ -213,7 +219,11 @@ posts.forEach((p, i) => {
   </header>
   <div class="prose">${p.html}</div>
   <footer class="post-foot">
-    <a class="comment" href="${ISSUES}" target="_blank" rel="noopener">Leave a comment on GitHub</a>
+    <section class="comments" id="comments" aria-labelledby="comments-h">
+      <h2 id="comments-h">Comments</h2>
+      <div class="giscus" data-giscus data-repo="${GISCUS.repo}" data-repo-id="${GISCUS.repoId}" data-category="${GISCUS.category}" data-category-id="${GISCUS.categoryId}"></div>
+      <noscript><p><a href="${DISCUSSIONS}">Comments live in GitHub Discussions.</a></p></noscript>
+    </section>
     <nav class="pager" aria-label="More posts">
       ${older ? `<a href="${older.url}"><span>Older</span>${esc(older.title)}</a>` : '<span></span>'}
       ${newer ? `<a class="next" href="${newer.url}"><span>Newer</span>${esc(newer.title)}</a>` : ''}
