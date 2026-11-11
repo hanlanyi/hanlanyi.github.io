@@ -2,7 +2,7 @@
 title: about
 date: 2024-05-13 11:39:48
 ---
-Hi there! I'd love to hear your thoughts. Feel free to leave a [comment](https://github.com/hanlanyi/hanlanyi.github.io/issues), even if it's just a simple 'Hi'. Thank you :)
+Hi there! I'd love to hear your thoughts. Feel free to leave a [comment](https://github.com/hanlanyi/hanlanyi.github.io/discussions), even if it's just a simple 'Hi'. Thank you :)
 
 [YouTube](https://www.youtube.com/@hanlanyi)
 
