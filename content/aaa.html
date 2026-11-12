@@ -50,7 +50,7 @@
     <dl class="choices">
       <div><dt>Local model, no cloud</dt><dd>Everything runs against an OpenAI-compatible endpoint on the same LAN: LM Studio serving Gemma. The endpoint can be retyped inside the headset.</dd></div>
       <div><dt>Unity is the runtime</dt><dd>Agents, tools, prompts and memory all live in the Unity 6 client. No Python server is required in the loop.</dd></div>
-      <div><dt>Shapes are data</dt><dd>Each preset is 27 integer voxel cells in a JSON file. Adding a shape needs no recompile.</dd></div>
+      <div><dt>Shapes are data</dt><dd>Each preset is 27 voxel cells in a JSON file, on whole or half grid steps so even-width layers stay centred. Adding a shape needs no recompile.</dd></div>
       <div><dt>Fix the prompt, not the parser</dt><dd>When a small model's output breaks tool parsing, the prompt changes. The parser stays strict.</dd></div>
       <div><dt>Test both sides</dt><dd>“Give me a cube” passes only if the answer says so and a cube really exists in the scene.</dd></div>
       <div><dt>SDK behind an interface</dt><dd>Meta SDK calls sit behind a platform layer with a null implementation, so tests run headless.</dd></div>
