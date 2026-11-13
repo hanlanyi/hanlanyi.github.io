@@ -125,7 +125,7 @@
     sub: 'Acco is the executor. It knows the room (a table, a chair, everything already spawned), so each cube lands where the words say.',
     fine: 'Scripted, with the real tool name and result format. On the headset the room comes from Meta’s scene understanding.',
     idle: 'Scene: TABLE, CHAIR, 0 cubes. Pick a request.',
-    prompts: () => ['Put a cube on the table', 'Put a cube on the chair', 'Put a cube under the table', 'Stack another one on top', 'Clear the scene'],
+    prompts: () => ['Put a cube on the table', 'Put a cube on the chair', 'Stack another one on top', 'Clear the scene'],
     build() {
       extent = 36; centre = [0, 4.5, 0]; yaw = -0.75; pitch = 0.5;
       this.cubes = []; this.cubeActors = [];
@@ -143,11 +143,6 @@
     // Decide where the cube goes: the "scene understanding" step.
     place(text) {
       const on = (where) => this.cubes.filter((c) => c.where === where);
-      if (/table/i.test(text) && /under/i.test(text)) {
-        const n = on('under').length;
-        if (n >= 2) return { fail: 'There is no room left under the table.' };
-        return { where: 'under', pos: [TABLE.x - 0.15 + n * 0.3, EDGE / 2, TABLE.z], why: `Under the table means on the floor, inside the table's footprint. The floor is y = 0, so the cube's centre sits at y = ${f2(EDGE / 2)}.`, done: 'There is a cube under the table.' };
-      }
       if (/table/i.test(text)) {
         const n = on('table').length;
         if (n >= 3) return { fail: 'The table is full. Try stacking, or clear the scene.' };
